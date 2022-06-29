@@ -1,0 +1,39 @@
+@import "./variables";
+
+.mainBoardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  .row {
+    display: inline-flex;
+    gap: 1px;
+  }
+
+  [pattern-type="white-black"] {
+    *:nth-child(1n) {
+      background: gray;
+    }
+
+    *:nth-child(2n) {
+      background: brown;
+    }
+  }
+
+  [pattern-type="black-white"] {
+    *:nth-child(1n) {
+      background: brown;
+    }
+
+    *:nth-child(2n) {
+      background: gray;
+    }
+  }
+}
+
+.gamePiece {
+  width: 50px;
+  height: 50px;
+  margin: 1;
+  background: black;
+}
