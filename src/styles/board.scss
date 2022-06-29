@@ -1,5 +1,13 @@
 @import "./variables";
 
+.board-hidden {
+  display: none !important;
+}
+
+.reset-btn-hidden {
+  display: none;
+}
+
 .mainBoardContainer {
   display: flex;
   flex-direction: column;
@@ -28,6 +36,20 @@
     *:nth-child(2n) {
       background: gray;
     }
+  }
+}
+
+.row {
+  [piece-role="BLACK-NORMAL"] {
+    border-radius: 50%;
+    background: blue !important;
+    cursor: pointer;
+  }
+
+  [piece-role="WHITE-NORMAL"] {
+    border-radius: 50%;
+    background: green !important;
+    cursor: pointer;
   }
 }
 
